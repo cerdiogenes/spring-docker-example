@@ -17,5 +17,6 @@ services:
     # This ensures that the pid namespace is shared between the host
     # and the container. It's not necessary to be able to run spring
     # commands, but it is necessary for "spring status" and "spring stop"
-    # to work properly.
+    # to work properly. Also add this pid to the web service definition
+    # to have proper output when calling docker-compose run web spring status
     pid: host
